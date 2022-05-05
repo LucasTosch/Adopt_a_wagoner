@@ -1,0 +1,10 @@
+<div class="container-fluid min-vh-100">
+  <div class="container-form">
+    <div class="card-form">
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :description, label: 'Write your new description' %>
+        <%= f.submit 'Edit my profile', id: 'btn-form' %>
+      <% end %>
+    </div>
+  </div>
+</div>
