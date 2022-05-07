@@ -1,0 +1,45 @@
+<div class="container-fluid min-vh-100">
+  <div class="container-profile">
+    <div class="card" style="width: 24rem;">
+      <div class="card-body">
+        <img class="avatar-xtralarge" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ondine-dbn" />
+        <h5 class="card-title"><%= @offer.title%> </h5>
+        <h6 class="card-subtitle mb-2 text-muted">Entrepreneur Expert</h6>
+        <p class="card-text"><%= @offer.description %></p>
+        <div class="container">
+          <ul class="p-0" style="list-style:none">
+            <li>
+              <span><%= @offer.skill %></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <form action="/offers/:offer_id/bookings" method="post">
+      <div class="form-row">
+        <div class="col">
+          <label for="start_date">Start Date</label>
+          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Start Date">
+        </div>
+      </div>
+      <div class="form-row mt-3">
+        <div class="col">
+          <label for="end_date">End Date</label>
+          <input type="date" class="form-control" id="exampleInputPassword1" placeholder="End Date">
+        </div>
+      </div>
+      <%# <button type="submit" class="btn btn-primary mt-3">Submit</button> %>
+    </form>
+    <div class="box">
+      <a href="#popup" class="button">Book a dev</a>
+    </div>
+
+    <div id="popup" class="overlay">
+      <div class="popup">
+        <h2>Booking</h2>
+        <a href="#" class="cross">&times;</a>
+        <p>Congratulations you just booked <%= @offer.title %></p>
+      </div>
+    </div>
+</div>
