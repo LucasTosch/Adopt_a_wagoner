@@ -45,6 +45,7 @@
 
 .card-skill {
   border-radius: 50%;
+}
 
 .card-offer {
   background-color: white;
@@ -76,7 +77,6 @@
   background-color: blue;
   border-radius: 4px;
   padding: 4px;
-
 }
 
 .card-description {
@@ -103,8 +103,8 @@
 
 .card-link {
   position: absolute;
-  top: 150px;
-  right: 120px;
+  top: 110px;
+  right: 180px;
   opacity: 0;
   text-decoration: none;
 }
@@ -112,19 +112,30 @@
 .card-offer:hover {
   .card-link {
     opacity: 1;
-    color:#F58744;
-    text-decoration: underline;
-    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
     text-shadow: none;
   }
 }
 
 a {
-  color:#F58744;
-  text-decoration: underline;
+  color: white;
+  text-decoration: none;
   text-shadow: none;
 }
 
 a:hover {
   color: white;
+}
+
+.btn {
+  background-color: #F58744;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn:hover {
+  color: white;
+  opacity: 0.8;
 }

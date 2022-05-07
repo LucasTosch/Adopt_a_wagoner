@@ -1,26 +1,25 @@
-<%# <div class="container-fluid min-vh-100"> %>
-<div class="container-index-offers">
+<div class="container-fluid min-vh-100">
+  <div class="container-index-offers">
   <%# <div class="row">
   <div class="col"> %>
-  <div class="cards-offers">
-    <% @offers.each do |offer| %>
-      <div class="card-offer">
-      <p class="card-link"><%= link_to 'See more', offer_path(offer)%></p>
-        <div class="card-image" style="background-image: url(https://kitt.lewagon.com/placeholder/users/ondine-dbn)">
-         <h5 class="card-title"><%= offer.title%> </h5>
-        </div>
-          <div class="card-description">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <h6 class="card-subtitle mb-2 text-muted"><%= offer.description %></h6>
-            <%# <div class="buttons"> %>
-              <button class="btn-skill"><%= offer.skill %></button>
-              <%# <button class="btn-booking">See more</button> %>
-            <%# </div> %>
+    <div class="cards-offers">
+      <% @offers.each do |offer| %>
+        <div class="card-offer">
+          <p class="card-link"><%= link_to 'See more', offer_path(offer)%></p>
+          <div class="card-image" style="background-image: url(https://kitt.lewagon.com/placeholder/users/ondine-dbn)">
+            <h5 class="card-title"><%= offer.title%> </h5>
           </div>
-      </div>
-    <% end %>
+            <div class="card-description">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <h6 class="card-subtitle mb-2 text-muted"><%= offer.description %></h6>
+              <%# <div class="buttons"> %>
+              <button class="btn-skill"><%= offer.skill %></button>
+                <%# <button class="btn-booking">See more</button> %>
+              <%# </div> %>
+            </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <%# </div>
-  </div> %>
 </div>
