@@ -12,11 +12,15 @@
               <span><%= @offer.skill %></span>
             </li>
           </ul>
+
+<%= link_to 'Book this dev', new_offer_booking_path(@offer) %>
         </div>
       </div>
     </div>
   </div>
-    <form action="/offers/:offer_id/bookings" method="post">
+
+
+    <%# <form action="/offers/:offer_id/bookings" method="post">
       <div class="form-row">
         <div class="col">
           <label for="start_date">Start Date</label>
@@ -29,9 +33,9 @@
           <input type="date" class="form-control" id="exampleInputPassword1" placeholder="End Date">
         </div>
       </div>
-      <%# <button type="submit" class="btn btn-primary mt-3">Submit</button> %>
-    </form>
-    <div class="box">
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form> %>
+    <%# <div class="box">
       <a href="#popup" class="button">Book a dev</a>
     </div>
 
@@ -40,6 +44,6 @@
         <h2>Booking</h2>
         <a href="#" class="cross">&times;</a>
         <p>Congratulations you just booked <%= @offer.title %></p>
-      </div>
+      <%# </div>
     </div>
-</div>
+</div> %>
