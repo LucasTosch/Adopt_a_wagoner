@@ -19,31 +19,10 @@
     </div>
   </div>
 
-
-    <%# <form action="/offers/:offer_id/bookings" method="post">
-      <div class="form-row">
-        <div class="col">
-          <label for="start_date">Start Date</label>
-          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Start Date">
-        </div>
-      </div>
-      <div class="form-row mt-3">
-        <div class="col">
-          <label for="end_date">End Date</label>
-          <input type="date" class="form-control" id="exampleInputPassword1" placeholder="End Date">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary mt-3">Submit</button>
-    </form> %>
-    <%# <div class="box">
-      <a href="#popup" class="button">Book a dev</a>
-    </div>
-
-    <div id="popup" class="overlay">
-      <div class="popup">
-        <h2>Booking</h2>
-        <a href="#" class="cross">&times;</a>
-        <p>Congratulations you just booked <%= @offer.title %></p>
-      <%# </div>
-    </div>
+  <div class="container-reviews d-flex flex-column align-items-center">
+    <% @offer.reviews.each do |review| %>
+     <div><%= review.content %></div>
+     <div><%= review.rating %></div>
+    <% end %>
+  </div>
 </div> %>
