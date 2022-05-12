@@ -1,9 +1,9 @@
 <div class="container">
   <div class="content-wrapper">
     <%= simple_form_for  [@offer, @review] do |f| %>
-      <%= f.input :content %>
-      <%=   f.collection_radio_buttons :rating, [[1, '1'] ,[2, '2'],[3, '3'],[4, '4'],[5, '5']], :first, :last %>
-      <%= f.button :submit %>
+      <%= f.input :content, label: 'Dites ce que vous pensez de ce dev et de son travail' %>
+       <%= f.input :rating, label: 'Note', as: :select, collection: (1..5), required: true, prompt: "Comment le/la noteriez-vous (1-5) ?", input_html: { data: { controller: "jquery-bar-rating" } } %>
+      <%= f.button :submit, 'Envoyer' %>
     <% end %>
   </div>
 </div>
