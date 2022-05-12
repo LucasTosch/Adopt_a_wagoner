@@ -1,38 +1,47 @@
 <div class="container-fluid min-vh-100">
-  <div class="container-profile">
-    <div class="card" style="width: 24rem;">
-      <div class="card-body">
-        <img class="avatar-xtralarge" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ondine-dbn" />
-        <h5 class="card-title"><%= @offer.title%> </h5>
-        <h6 class="card-subtitle mb-2 text-muted">Entrepreneur Expert</h6>
-        <p class="card-text"><%= @offer.description %></p>
-        <div class="container">
-          <ul class="p-0" style="list-style:none">
-            <li>
-              <span><%= @offer.skill %></span>
-            </li>
-          </ul>
-
-          <%= link_to 'Book this dev', new_offer_booking_path(@offer) %>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card mx-auto" style="width: 24rem;">
+          <div class="card-body">
+            <img class="avatar-xtralarge" alt="avatar-large" src="<%= @offer.picture %>" />
+            <h5 class="card-title pt-2"><%= @offer.title%> </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Entrepreneur Expert</h6>
+            <p class="card-text"><%= @offer.description %></p>
+            <div class="container">
+              <ul class="p-0" style="list-style:none">
+                <li>
+                  <% skills = @offer.skill.split %>
+                  <% skills.each do |skill| %>
+                    <button class="btn-skill"><%= skill %></button>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col">
+        <div class="container-reviews d-flex flex-column align-items-center">
+          <% @offer.reviews.each do |review| %>
+            <div class="container-review align-items-center bg-light border w-100">
+              <div class="text-center"><%= review.content %></div>
+                <div class="text-center">
+                  <% review.rating.to_i.times do  %>
+                    <i class="bi bi-star-fill"></i>
+                  <% end %>
+                </div>
+              </div>
+            <br>
+          <% end %>
+            </div>
+            <div class="text-center pt-3">
+              <div class="btn"><%= link_to 'Lache un com', new_offer_review_path(@offer)%></div>
+            </div>
       </div>
     </div>
-  </div>
-
-  <div class="container-reviews d-flex flex-column align-items-center">
-    <% @offer.reviews.each do |review| %>
-      <div class="container-review align-items-center">
-        <div class="text-center"><%= review.content %></div>
-        <div class="text-center">
-          <% review.rating.to_i.times do  %>
-            <i class="bi bi-star-fill"></i>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
   </div>
   <div class="text-center pt-3">
-    <div class="btn"><%= link_to 'Lache un com', new_offer_review_path(@offer)%>
-    </div>
+    <div class="btn rounded w-50"><%= link_to 'Book this dev', new_offer_booking_path(@offer) %></div>
   </div>
 </div>
