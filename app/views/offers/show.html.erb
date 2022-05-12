@@ -13,7 +13,7 @@
             </li>
           </ul>
 
-<%= link_to 'Book this dev', new_offer_booking_path(@offer) %>
+          <%= link_to 'Book this dev', new_offer_booking_path(@offer) %>
         </div>
       </div>
     </div>
@@ -21,8 +21,18 @@
 
   <div class="container-reviews d-flex flex-column align-items-center">
     <% @offer.reviews.each do |review| %>
-     <div><%= review.content %></div>
-     <div><%= review.rating %></div>
+      <div class="container-review align-items-center">
+        <div class="text-center"><%= review.content %></div>
+        <div class="text-center">
+          <% review.rating.to_i.times do  %>
+            <i class="bi bi-star-fill"></i>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
-</div> %>
+  <div class="text-center pt-3">
+    <div class="btn"><%= link_to 'Lache un com', new_offer_review_path(@offer)%>
+    </div>
+  </div>
+</div>
