@@ -1,0 +1,15 @@
+.container-booking {
+  display: flex;
+  justify-content: center;
+}
+
+.card-booking {
+  text-align: center;
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+  background: white;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+}

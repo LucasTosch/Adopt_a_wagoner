@@ -1,5 +1,18 @@
 <div class="container-fluid min-vh-100">
-  <h1 class="offers-title">Plus de 15 Wagonners aux talents exceptionnels disponibles !</h1>
+  <h1 class="offers-title" style="text-align: center">Plus de 15 Wagonners aux talents exceptionnels disponibles !</h1>
+  <h2 style="text-align: center">Trouve un Wagonner avec des compétences spécifiques</h2>
+  <p></p>
+    <div class="container-search">
+      <%= form_tag offers_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Tape le language qu'il te faut, ex : Ruby, CSS..."
+      %>
+      <p></p>
+      <p style="text-align: center"><%= submit_tag "C'est parti !", class: "btn" %></p>
+      <% end %>
+    </div>
   <div class="container-index-offers">
   <%# <div class="row">
   <div class="col"> %>
