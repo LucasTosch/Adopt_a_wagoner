@@ -146,3 +146,44 @@ a:hover {
 .card-title {
   font-weight: bold;
 }
+
+.card-profile {
+  margin-left: 10px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  height: 35rem;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+}
+
+.card-reservations {
+  margin-left: 40px;
+  flex-grow: 1;
+
+}
+
+.card-reservation-title {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-reservation {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: larger;
+}
