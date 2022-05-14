@@ -1,9 +1,9 @@
 <div class="container-fluid min-vh-100">
   <div class="container-profile">
-    <div class="card" style="width: 24rem;">
+    <div class="card-profile">
       <div class="card-body">
-        <img class="avatar-xtralarge" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ondine-dbn" />
-        <h5 class="card-title"><%= @user.first_name%> </h5>
+        <img class="avatar-users" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95479886?v=4" />
+        <h2 class="card-title"><%= @user.first_name %> <%= @user.last_name %> </h2>
         <%# <i class="fas fa-star"></i>
         <i class="fas fa-star-half-alt"></i> %>
         <h6 class="card-subtitle mb-2 text-muted">Entrepreneur Expert</h6>
@@ -11,19 +11,15 @@
         <%= link_to 'Modifier mon profil', edit_user_path(@user), class: "btn"  %>
       </div>
     </div>
-  </div>
-
-  <div class="container-profile">
-    <div class="card" style="width: 24rem;">
-      <h5>Mes réservations</h5>
-      <% @user.bookings.each do |booking| %>
-        <ul class="p-0" style="list-style:none">
-        <li>
-        <i class='fa fa-calendar'></i> <%= booking.start_date %>
-        <%= booking.end_date %>
-        </li>
-        </ul>
-      <% end %>
-    </div>
+      <div class="card-reservations">
+        <strong><h2 class="card-reservation-title">Mes réservations</h2></strong>
+        <% @user.bookings.each do |booking| %>
+          <div class="card-reservation">
+            <p>Réservation de l'incroyable Wagonner <strong><%= booking.offer.title  %></strong> : </p>
+            <i class='fa fa-calendar'></i> <%= booking.start_date %>
+            <%= booking.end_date %>
+          </div>
+        <% end %>
+      </div>
   </div>
 </div>
