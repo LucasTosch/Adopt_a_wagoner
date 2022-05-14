@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Offer.create( title: 'Thomas Andrieu', description: 'Une seule chose à dire : je ne commit pas sur master', skill: 'Ruby Python ReactJS', picture: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1642097921/d0eicmhykqntxw0aapbg.jpg')
 Offer.create( title: 'Nicolas Castelli', description: 'Psychologue du code', skill: 'JavaScript C++ ReactNative', picture: 'https://avatars.githubusercontent.com/u/95449242?v=4')
-Offer.create( title: 'Wilson Cely', description: 'Langage ou langage informatique, je suis polyglotte', skill: 'SQL HTML CSS', picture: 'https://avatars.githubusercontent.com/u/96889576?v=4')
+Offer.create( title: 'Wilson Cely', description: 'Langues vivantes ou langages informatiques, je suis polyglotte', skill: 'SQL HTML CSS', picture: 'https://avatars.githubusercontent.com/u/96889576?v=4')
 Offer.create( title: 'Thibault Bayard', description: 'C\'est l\'heure du du-du-du-duel', skill: 'Cobol Stimulus Rails', picture: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1642158180/qzyuzedmrbawf3cgyrnv.jpg')
 Offer.create( title: 'Ambroise Collier', description: 'Futur manager de vos dévs', skill: 'VueJS AngularJS NodeJS', picture: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1642179839/cud6tcragczpe7tuzdfu.jpg')
 Offer.create( title: 'Ondine Debienne', description: 'Ninja dév, je règle vos bugs en 1 coup de katana', skill: 'Rails Java PHP', picture: 'https://avatars.githubusercontent.com/u/93662194?v=4')
