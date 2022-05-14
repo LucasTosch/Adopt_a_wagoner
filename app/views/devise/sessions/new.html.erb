@@ -15,10 +15,10 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="text-center">
-        <div class="form-actions btn btn-primary">
+        <div class="form-actions btn btn">
           <%= f.button :submit, "Sign in" %>
         </div>
-        <p class="pt-3 fst-italic"> Not yet registered ? Go to the <%= link_to "Sign up", "/users/sign_up"%> page !
+        <p class="pt-3 fst-italic"> Not yet registered ? Go to the <%= link_to "Sign up", "/users/sign_up", class: "btn"%> page !
         </p>
       </div>
       <% end %>

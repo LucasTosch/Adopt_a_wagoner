@@ -117,14 +117,18 @@
   }
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  text-shadow: none;
-}
+// a {
+//   text-decoration: none;
+//   text-shadow: none;
+// }
 
 a:hover {
   color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .btn {
