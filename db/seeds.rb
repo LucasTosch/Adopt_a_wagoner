@@ -21,4 +21,3 @@ Offer.create( title: 'Brendan O\'Connell', description: 'Make the code great aga
 Offer.create( title: 'Luc Siat', description: 'Coder ou dormir ? La question est vite répondue', skill: 'Ruby Python ReactJS', picture: 'https://avatars.githubusercontent.com/u/95415989?v=4')
 Offer.create( title: 'Lucas Toschini', description: 'Je collectionne les cartes et les skills', skill: 'Swift C# Ruby', picture: 'https://avatars.githubusercontent.com/u/95479886?v=4')
 Offer.create( title: 'Aurélie Tournay', description: 'Experte en bière et en code', skill: 'Ruby Python ReactJS', picture: 'https://avatars.githubusercontent.com/u/96064648?v=4')
-Offer.create( title: 'Nicolas Castelli', description: 'Psychologue du code', skill: 'JavaScript C++ ReactNative', picture: 'https://avatars.githubusercontent.com/u/95449242?v=4')
